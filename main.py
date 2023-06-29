@@ -17,11 +17,9 @@ import numpy as np
 
 features = 'null'
 
-# SA1: load features from features.pkl
 with open('features.pkl', 'rb') as f:
     features = pickle.load(f)
 
-# SA1: Load the captions from caption.txt
 with open('captions.txt', 'r') as f:
     next(f)
     captions_doc = f.read()
