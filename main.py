@@ -111,7 +111,8 @@ feature = vgg_model.predict(image, verbose=0)
 
 # Use predict_caption(model, feature, tokenizer) to predict the caption and store it in caption variable
 caption = predict_caption(model, feature, tokenizer)
-
+caption = caption.replace('startseq ', '')
+caption = caption.replace('endseq', '')
 print(caption)
                     
 img = cv2.putText(img, caption, (10,10), cv2.FONT_HERSHEY_DUPLEX, 0.3, (255, 255, 255), 2)
